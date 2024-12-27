@@ -1,0 +1,87 @@
+
+Begin unit testing...
+TEST:  BigInt switching from base = 32768 to new base = 10.........PASS!
+TEST:  BigInt u default constructor which gives u = 0..........PASS!
+TEST:  Constructor BigInt u( d ) from ppuint d = 1234.........PASS!
+TEST:  Constructor BigInt u( s ) from string s = "1234".........PASS!
+TEST:  Constructor BigInt u( s ) from INVALID string s = "12x34".........PASS!
+TEST:  Copy constructor BigInt v( u ) from BigInt u( 123 ).........PASS!
+TEST:  Assignment operator v = u from BigInt v and BigInt u( 123 ).........PASS!
+TEST:  Implicit casting ppuint d = u from BigInt u( "01234" ).........PASS!
+TEST:  Explicit casting static_cast< ppuint >( u ) from BigInt u( "01234" ).........PASS!
+TEST:  Check overflow during ui = static_cast< ppuint >(u) on BigInt u( "3141592653589793238462643383279" ).........PASS!
+TEST:  Stream output os << u from BigInt u( "1234567890" ).........PASS!
+TEST:  Stream input is >> u for BigInt u where we've loaded the stream is.str( "314159265358979323846264" ).........PASS!
+TEST:  Equality test BigInt u == ppuint d?.........PASS!
+TEST:  Equality test BigInt u == BigInt v.........PASS!
+TEST:  BigInt u > BigInt v.........PASS!
+TEST:  BigInt u( "1234" ) -= ppuint d.........PASS!
+TEST:  BigInt u -= static_cast<ppuint>(5) underflow.........PASS!
+TEST:  BigInt u += ppuint d.........PASS!
+TEST:  BigInt v = BigInt u * ppuint d.........PASS!
+TEST:  BigInt u /= ppuint d.........PASS!
+TEST:  BigInt u /= ppuint d underflow to zero..........PASS!
+TEST:  BigInt v = ++BigInt u.........PASS!
+TEST:  BigInt v = --BigInt u.........PASS!
+TEST:  BigInt++.........PASS!
+TEST:  BigInt--.........PASS!
+TEST:  one digit BigInt + ppuint.........PASS!
+TEST:  two digit BigInt + ppuint.........PASS!
+TEST:  BigInt + BigInt.........PASS!
+TEST:  BigInt + BigInt.........PASS!
+TEST:  BigInt - BigInt.........PASS!
+TEST:  BigInt - BigInt < 0.........PASS!
+TEST:  BigInt - ppuint.........PASS!
+TEST:  one digit BigInt * BigInt.........PASS!
+TEST:  two digit BigInt * BigInt.........PASS!
+TEST:  BigInt multidigit *.........PASS!
+TEST:  BigInt multidigit *=.........PASS!
+TEST:  BigInt / BigInt one digit divisor..........PASS!
+TEST:  BigInt / BigInt multidigit.........PASS!
+TEST:  BigInt / BigInt leading zero digit..........PASS!
+TEST:  BigInt / 0 .........PASS!
+TEST:  BigInt % BigInt with u > v.........PASS!
+TEST:  BigInt multidigit mod with normalizing constant d = 1.........PASS!
+TEST:  BigInt % BigInt with u < v.........PASS!
+TEST:  BigInt % ppuint = 314159 / 9 = 5 with ppuint < base .........PASS!
+TEST:  BigInt % ppuint = 398765 % 11u with ppuint > base = 10 throws error? .........PASS!
+TEST:  BigInt / BigInt low probability if branch..........PASS!
+TEST:  Switching back from base 10 to oldBase 32768.........PASS!
+TEST:  Decimal string to BigInt conversion and back to decimal string using default base..........PASS!
+TEST:  BigInt z = x * y then x =? z / y multidigit with default base..........PASS!
+TEST:  BigInt testBit.........PASS!
+TEST:  testBit().........PASS!
+TEST:  BigInt power( ppuint 2, ppuint 100 ).........PASS!
+TEST:  BigInt ceilLg( 6 ).........PASS!
+TEST:  BigInt eval 2 ^ 1198 - 1.........PASS!
+TEST:  ModP 10 = 3 (mod 7).........PASS!
+TEST:  ModP -10 = 4 (mod 7).........PASS!
+TEST:  ModP( 0 ) throwing ArithModPError.........PASS!
+TEST:  ppuint gcd( 85, 25 ) = 5.........PASS!
+TEST:  BigInt gcd( 779953197883173551166308319545, 1282866356929526866866376009397 ) = 1.........PASS!
+TEST:  c,r = addMod( a, b, n ) for ppuint type of 32 bits .........PASS!
+TEST:  c,r = timesTwoMod( a, n ) for ppuint type of 32 bits .........PASS!
+TEST:  c,r = multiplyMod( a, b, n ) for ppuint type of 32 bits .........PASS!
+TEST:  PowerMod ppuint 3^10 = 4 (mod 7).........PASS!
+TEST:  c,r = PowerMod( a, b ) modulo n for ppuint type of 32 bits .........PASS!
+TEST:  PowerMod BigInt 3^10 = 4 (mod 7).........PASS!
+TEST:  PowerMod with out of range inputs..........PASS!
+TEST:  InverseModP 3 * 5 = 1 (mod 7).........PASS!
+TEST:  IsPrimitiveRoot.   3 is a primitive root of 7..........PASS!
+TEST:  IsPrimitiveRoot.   2 is a primitive root of 11..........PASS!
+TEST:  IsPrimitiveRoot.   3 is NOT a primitive root of 11..........PASS!
+TEST:  IsPrimitiveRoot.   5 is a primitive root of 65003..........PASS!
+TEST:  IsPrimitiveRoot.   8 is NOT a primitive root of 65003..........PASS!
+TEST:  constant coefficient test..........PASS!
+TEST:  constant coefficient is primitive root..........PASS!
+TEST:  UniformRandomIntegers with range [0, 11).........PASS!
+TEST:  isProbablyPrime on ppuint prime 97 with random x = 10.........PASS!
+TEST:  isAlmostSurelyPrime for ppuint prime 97.........PASS!
+TEST:  isAlmostSurelyPrime for BigInt prime 97.........PASS!
+TEST:  isAlmostSurelyPrime for non-prime BigInt 49.........PASS!
+TEST:  isAlmostSurelyPrime on the 10000th prime number 104729 of ppuint type.........PASS!
+TEST:  Factor table method used on unsigned int 3^20 - 1 = 3486784400 = 2^4 5^2 11^2 61 1181.........FAIL!
+    caught FactorError: [ Missing the factor table for p = 3 named c03minus.txt Please copy it into the current directory C:\404Eyot\Project\MFoCS\Primpoly which contains the executable! in file ppFactor.cpp at line 143 ] 
+
+End unit testing...
+SORRY.  One or more unit tests failed!
